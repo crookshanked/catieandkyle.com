@@ -7,24 +7,36 @@
     <title>Home</title>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
-    <!-- <link rel="stylesheet" href="css/bootstrap-theme.css"> -->
     <link rel="stylesheet" href="css/stylesheet.css">
 </head>
 <body>
-  <nav class="nav nav-pills flex-column flex-sm-row">
-        <a class="flex-sm-fill text-sm-center nav-link active" href="index.html">Home</a>
-        <a class="flex-sm-fill text-sm-center nav-link" href="about.html">About</a>
-        <a class="flex-sm-fill text-sm-center nav-link" href="directions.html">Directions</a>
-        <a class="flex-sm-fill text-sm-center nav-link" href="#">Registry</a>
-        <a class="flex-sm-fill text-sm-center nav-link" href="contact.html">RSVP</a>
-  </nav>
+
+  <nav class="navbar navbar-expand-lg  nav nav-pills flex-column flex-sm-row">
+    <button class="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div id="navbarSupportedContent" class="collapse navbar-collapse">
+      <a class="flex-sm-fill text-sm-center nav-link col active" href="index.html">Home</a>
+      <a class="flex-sm-fill text-sm-center nav-link col" href="about.html">About</a>
+      <a class="flex-sm-fill text-sm-center nav-link col" href="directions.html">Directions</a>
+      <a class="flex-sm-fill text-sm-center nav-link col" href="#">Registry</a>
+      <a class="flex-sm-fill text-sm-center nav-link col" href="contact.html">RSVP</a>
+    </div>
+      </nav>
   <section class="bgimage">
     <div class="container-fluid">
       <div class="row">
         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center">
           <h1>Catherine & Kyle</h1>
-          <h2>April 28th, 2018</h2>
-          <p><a href="contact.html" class="btn btn-primary btn-large">RSVP »</a></p>
+          <h2><a href="http://glencairn.yorkmg.org/">Glencairn Gardens</a></h2>
+          <h3>April 28th, 2018</h3>
+          <p><a href="contact.html" class="btn btn-warning btn-large">RSVP »</a></p>
         </div>
       </div>
     </div>
@@ -35,15 +47,18 @@
       <div class="row">
         <div class="entry col-lg-8 col-md-8 col-sm-12 col-xs-12">
           <h3 class="entryTitle">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              <span class="firstLetter">W</span>elcome! Glad you're here.
           </h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate ea, iusto nemo provident quasi tenetur. Animi, architecto blanditiis debitis distinctio, ea esse eum maiores, minima molestias quo sit unde veritatis!</p>
+          <p>You're probably looking for details about our coming wedding. You're in the right place.</p>
+          <p>Get a brief history of Catie and Kyle on the about us page, and afterwards <strong>please take a moment to RSVP via the google form on the RSVP page.</strong></p>
+          <p>If you need directions, check out the respective page, and if you need to reach out to us for more info.</p>
+          <p>Finally, if you're looking for gift ideas please take a look at our registry. We're grateful for your interest.</p>
         </div>
-        <div class="col-lg-4 col-lg-4 hidden-sm hidden-xs">
+        <div class="sidebar col-lg-4 col-lg-4 hidden-sm hidden-xs">
           <h4 class="sidebarTitle">
-              Cupiditate ea, iusto nemo provident quasi tenetur.
+            <span class="firstLetter">O</span>h my goodness!.
           </h4>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae esse in inventore libero pariatur sit totam. Ad animi debitis deleniti et explicabo facere laboriosam nesciunt officiis quas, quis quisquam quos.</p>
+          <p class="countdown-timer">Our wedding is in <span id="countdown"></span>days!</p>
         </div>
       </div>
     </div>
@@ -66,5 +81,6 @@
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4" crossorigin="anonymous"></script>
+  <script src="js/scripts.js"></script>
 </body>
 </html>

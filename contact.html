@@ -9,41 +9,66 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
     <!-- <link rel="stylesheet" href="css/bootstrap-theme.css"> -->
     <link rel="stylesheet" href="css/stylesheet.css">
+    <style>
+        header, #header {
+            height:100%;
+        }
+        .entry iframe {
+            height:1100px;
+        }
+        footer, #footer {
+            position: initial;
+        }
+    </style>
 </head>
 <body>
-  <nav class="nav nav-pills flex-column flex-sm-row">
-        <a class="flex-sm-fill text-sm-center nav-link" href="index.html">Home</a>
-        <a class="flex-sm-fill text-sm-center nav-link" href="about.html">About</a>
-        <a class="flex-sm-fill text-sm-center nav-link" href="directions.html">Directions</a>
-        <a class="flex-sm-fill text-sm-center nav-link" href="#">Registry</a>
-        <a class="flex-sm-fill text-sm-center nav-link active" href="contact.html">RSVP</a>
-  </nav>
-  <section class="bgimage">
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center">
-          <h1>Catherine & Kyle</h1>
-          <h2>April 28th, 2018</h2>
-          <p><a href="contact.html" class="btn btn-primary btn-large">RSVP »</a></p>
-        </div>
-      </div>
+<nav class="navbar navbar-expand-lg nav nav-pills flex-column flex-sm-row">
+    <button class="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div id="navbarSupportedContent" class="collapse navbar-collapse">
+        <a class="flex-sm-fill text-sm-center nav-link col" href="index.html">Home</a>
+        <a class="flex-sm-fill text-sm-center nav-link col" href="about.html">About</a>
+        <a class="flex-sm-fill text-sm-center nav-link col" href="directions.html">Directions</a>
+        <a class="flex-sm-fill text-sm-center nav-link col" href="#">Registry</a>
+        <a class="flex-sm-fill text-sm-center nav-link col active" href="contact.html">RSVP</a>
     </div>
-  </section>
+</nav>
+<section class="bgimage">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center">
+                <h1>Catherine & Kyle</h1>
+                <h2><a href="http://glencairn.yorkmg.org/">Glencairn Gardens</a></h2>
+                <h3>April 28th, 2018</h3>
+                <p><a href="contact.html" class="btn btn-warning btn-large">RSVP »</a></p>
+            </div>
+        </div>
+    </div>
+</section>
 
   <header id="header">
     <div class="container">
       <div class="row">
         <div class="entry col-lg-8 col-md-8 col-sm-12 col-xs-12">
-          <h3 class="entryTitle">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-          </h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate ea, iusto nemo provident quasi tenetur. Animi, architecto blanditiis debitis distinctio, ea esse eum maiores, minima molestias quo sit unde veritatis!</p>
+            <h3 class="entryTitle">
+              RSVP
+            </h3>
+            <p>If you've already recieved your invitation please fill out the followng form.</p>
+            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSch3EhZQkC-VUfdDcjNN-X6KCM_9rYivgk2uitVJ5vvjTgXog/viewform?embedded=true" width="90%" height="500" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
         </div>
         <div class="col-lg-4 col-lg-4 hidden-sm hidden-xs">
-          <h4 class="sidebarTitle">
-              Cupiditate ea, iusto nemo provident quasi tenetur.
-          </h4>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae esse in inventore libero pariatur sit totam. Ad animi debitis deleniti et explicabo facere laboriosam nesciunt officiis quas, quis quisquam quos.</p>
+            <h4 class="sidebarTitle">
+              <span class="firstLetter">P</span>oints of contact:
+            </h4>
+            <p>If you need to reach us please shoot us an e-mail at: xxxx at catieandkyle.com</p>
+            <p>Otherwise, you can call xxxx at ###-###-####</p>
         </div>
       </div>
     </div>
