@@ -34,23 +34,25 @@ body {
     background-color: #fffee2;
 }
 .nav {
-    background-color:#d8a11a ;
+    background-color:transparent;
+    position: absolute;
+    width: 100%;
 }
 .nav a {
-    color: #0f0f0f;
+    color: #fff;
+    font-size: 28px;
     font-family:fontinregular;
 }
-.nav a.active {
-  color:#ccc;
-  text-decoration: underline;
-
-
-}
 .nav-pills .nav-link.active, .nav-pills .show>.nav-link {
-    background-color: #9e7216;
+    color:#ccc;
+    text-decoration: underline;
+    background-color: transparent;
 }
 header, #header {
-
+  overflow: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding-bottom: 40px;
 }
 section {
 
@@ -71,13 +73,19 @@ section {
     font-family:fontinregular;
 }
 footer, #footer {
-    background-color: #83a08a;
-    padding-top:15px;
-    padding-bottom:15px;
-    position: absolute;
+    /* background-color: #83a08a; */
+    background-color: #b52025;
+    /* padding-top:15px; */
+    /* padding-bottom:15px; */
+    position: relative;
     bottom:0;
     width:100%;
+    height: 40px;
+    margin-top: -40px;
+    clear: both;
+    padding-top: 8px;
     font-family:fontinregular;
+    color: #fff;
 }
 
 .bgimage {
@@ -114,22 +122,42 @@ footer, #footer {
     /*background-color: #d8a11a;*/
     /*border-color: #d8a11a;*/
 }
+.not-home .bgimage {
+height: 275px;
+}
+.page-directions .bgimage {
+  height: 500px;
+}
+.not-home h1 {
+  margin: 0;
+}
+.not-home h2 {
+  display: none;
+}
 .page-directions .map .container-fluid {
   position: static;
   top: initial;
 }
 
-// Extra small devices (portrait phones, less than 576px)
-// No media query since this is the default in Bootstrap
+/* // Extra small devices (portrait phones, less than 576px) */
+/* // No media query since this is the default in Bootstrap */
 
-// Small devices (landscape phones, 576px and up)
-@media (min-width: 576px) { ... }
+/* // Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
 
-// Medium devices (tablets, 768px and up)
-@media (min-width: 768px) { ... }
+}
 
-// Large devices (desktops, 992px and up)
-@media (min-width: 992px) { ... }
+/* // Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
 
-// Extra large devices (large desktops, 1200px and up)
-@media (min-width: 1200px) { ... }
+}
+
+/* // Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+
+}
+
+/* // Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+
+}
