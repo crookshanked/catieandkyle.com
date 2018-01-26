@@ -111,7 +111,8 @@ footer, #footer {
 .bgimage {
   width:100%;
   height:320px;
-  background: url('../img/hero-image.jpg');
+  /*background: url('../img/hero-image.jpg');*/
+  background: url('../img/hero.png');
   background-repeat: no-repeat;
   background-position: right center;
   background-size:cover;
@@ -182,7 +183,7 @@ height: 275px;
   .bgimage {
     width:100%;
     height:500px;
-    background: url('../img/hero-image.jpg');
+    /*background: url('../img/hero-image.jpg');*/
     background-repeat: no-repeat;
     background-position: center;
     background-size:cover;

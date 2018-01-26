@@ -1,0 +1,4 @@
+FIX THESE
+
+576 to 1199
+- hide second footer?
