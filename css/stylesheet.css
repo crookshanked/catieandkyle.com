@@ -42,6 +42,12 @@ body {
 .nav .navbar-toggler .navbar-toggler-icon {
   color:#000;
 }
+.hamburger-bar {
+    width: 35px;
+    height: 5px;
+    background-color: black;
+    margin: 6px 0;
+}
 .nav a {
     color: #fff;
     font-size: 28px;
@@ -134,21 +140,21 @@ footer, #footer {
     /*background-color: #d8a11a;*/
     /*border-color: #d8a11a;*/
 }
+.page-home .bgimage .countdown-timer {
+      font-family:fontinregular;
+      color: #fff;
+      font-size:28px;
+      font-weight: 600;
+}
 .not-home .bgimage {
 height: 275px;
 }
-.page-directions .bgimage {
-  height: 500px;
-}
+
 .not-home h1 {
   margin: 0;
 }
 .not-home h2 {
   display: none;
-}
-.page-directions .map .container-fluid {
-  position: static;
-  top: initial;
 }
 
 /* // Extra small devices (portrait phones, less than 576px) */
@@ -161,7 +167,20 @@ height: 275px;
 
 /* // Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {
-
+  .polaroid {
+    border: 25px #fefefe solid;
+    border-bottom: 75px #fefefe solid;
+    /* box-shadow: 4px 8px 12px #d2d2d2, -1px -1px 0 #ddd; */
+    box-shadow: 4px 8px 12px -2px #d2d2d2, -1px -1px 1px -1px #ddd;
+    margin-top: 2px;
+    margin-bottom: 30px;
+  }
+  .polaroid:after {
+    position: absolute;
+    z-index: 555;
+    content:'Catie and Kyle at the Stinson Apartment.';
+    font-size: 14px;
+  }
 }
 
 /* // Large devices (desktops, 992px and up) */
@@ -208,6 +227,15 @@ height: 275px;
   }
   .nav a.flex-sm-fill.text-sm-center.nav-link.col.active {
     color:#ccc;
+  }
+  .nav a.flex-sm-fill.text-sm-center.nav-link.col:last-child {
+    border:1px solid #d8a11a;
+    border-radius: 6px;
+    color: #d8a11a;
+    background-color: #fffee2;
+  }
+  .nav a.flex-sm-fill.text-sm-center.nav-link.col:last-child:hover {
+    background-color: cornsilk;
   }
 }
 

@@ -1,4 +1,4 @@
-var end = new Date('04/28/2018 6:00 PM');
+var end = new Date('04/28/2018 4:30 PM');
 
 var _second = 1000;
 var _minute = _second * 60;
@@ -21,10 +21,10 @@ function showRemaining() {
     var minutes = Math.floor((distance % _hour) / _minute);
     var seconds = Math.floor((distance % _minute) / _second);
 
-    document.getElementById('countdown').innerHTML = days + 'days ';
-    document.getElementById('countdown').innerHTML += hours + 'hrs ';
-    document.getElementById('countdown').innerHTML += minutes + 'mins ';
-    document.getElementById('countdown').innerHTML += seconds + 'secs';
+    document.getElementById('countdown').innerHTML = days + ' days ';
+    document.getElementById('countdown').innerHTML += hours + ' hours ';
+    document.getElementById('countdown').innerHTML += minutes + ' minutes ';
+    document.getElementById('countdown').innerHTML += seconds + ' seconds';
 }
 
 timer = setInterval(showRemaining, 1000);/**

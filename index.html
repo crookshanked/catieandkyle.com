@@ -10,6 +10,14 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
     <link rel="stylesheet" href="css/stylesheet.css">
+    <style media="screen">
+      html, body, .bgimage {
+        height: 100%;
+      }
+      footer, #footer {
+        background-color: transparent;
+      }
+    </style>
 </head>
 <body class="page-home">
 
@@ -21,12 +29,13 @@
             aria-controls="navbarSupportedContent"
             aria-expanded="false"
             aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"><i class="fa fa-bars fa-lg" aria-hidden="true" title="Toggle navigation"></i></span>
+          <span class="navbar-toggler-icon" title="Toggle navigation"><div class="hamburger-bar" aria-hidden="true"></div><div class="hamburger-bar" aria-hidden="true"></div><div class="hamburger-bar" aria-hidden="true"></div></span>
     </button>
     <div id="navbarSupportedContent" class="collapse navbar-collapse">
       <a class="flex-sm-fill text-sm-center nav-link col active" href="index.html">Home</a>
       <a class="flex-sm-fill text-sm-center nav-link col" href="about.html">About</a>
       <a class="flex-sm-fill text-sm-center nav-link col" href="directions.html">Directions</a>
+      <a class="flex-sm-fill text-sm-center nav-link col" href="accommodations.html">Accommodations</a>
       <a class="flex-sm-fill text-sm-center nav-link col" href="#">Registry</a>
       <a class="flex-sm-fill text-sm-center nav-link col" href="contact.html">RSVP</a>
     </div>
@@ -38,13 +47,14 @@
           <h1>Catherine & Kyle</h1>
           <h2><a href="http://glencairn.yorkmg.org/">Glencairn Gardens</a></h2>
           <h3>April 28th, 2018</h3>
+          <p class="countdown-timer">Our wedding is in <span id="countdown"></span></p>
           <p><a href="contact.html" class="btn btn-warning btn-large">RSVP »</a></p>
         </div>
       </div>
     </div>
   </section>
 
-  <header id="header">
+  <!-- <header id="header">
     <div class="container">
       <div class="row">
         <div class="entry col-lg-8 col-md-8 col-sm-12 col-xs-12">
@@ -64,15 +74,12 @@
         </div>
       </div>
     </div>
-  </header>
+  </header> -->
   <footer id="footer">
     <div class="container">
       <div class="row">
-        <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
             <h5>&copy; 2018 Kyle Crookshank</h5>
-        </div>
-        <div class="d-none d-sm-block offset-lg-4 col-lg-4 col-md-6 col-sm-12">
-            <h5>&copy; 2018 Lorem ipsum dolor sit amet.</h5>
         </div>
       </div>
     </div>
@@ -80,10 +87,9 @@
 </div>
 <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4" crossorigin="anonymous"></script>
-  <script defer src="https://use.fontawesome.com/releases/v5.0.4/js/all.js"></script>
+  <script src="js\jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="js\popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="js\bootstrap-4.0.0-beta.3.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4" crossorigin="anonymous"></script>
   <script src="js/scripts.js"></script>
 </body>
 </html>

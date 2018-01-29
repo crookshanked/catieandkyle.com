@@ -11,13 +11,31 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
     <link rel="stylesheet" href="css/stylesheet.css">
     <style>
-        .i4ewOd-pzNkMb-haAclf {
-            display: none!important;
+        .nav {
+          position: relative;
         }
+        #map {
+          height: 400px;
+          width: 100%;
+          background-color: #fffee2;
+          background-image: url('img\static_map.jpg');
+        }
+
+        .page-directions .nav a.flex-sm-fill.text-sm-center.nav-link.col {
+          color:#444;
+        }
+        .page-directions .nav a.flex-sm-fill.text-sm-center.nav-link.col.active {
+          color:#000;
+        }
+        .entryTitle {
+          font-size:28px;
+        }
+
+
     </style>
 </head>
 <body class="page-directions not-home">
-<nav class="navbar navbar-expand-lg nav nav-pills flex-column flex-sm-row" style="position:relative; background-color:rgb(77,106,121);">
+<nav class="navbar navbar-expand-lg nav nav-pills flex-column flex-sm-row">
     <button class="navbar-toggler"
             type="button"
             data-toggle="collapse"
@@ -25,50 +43,72 @@
             aria-controls="navbarSupportedContent"
             aria-expanded="false"
             aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"><i class="fa fa-bars fa-lg" aria-hidden="true" title="Toggle navigation"></i></span>
+          <span class="navbar-toggler-icon" title="Toggle navigation"><div class="hamburger-bar" aria-hidden="true"></div><div class="hamburger-bar" aria-hidden="true"></div><div class="hamburger-bar" aria-hidden="true"></div></span>
 
     </button>
     <div id="navbarSupportedContent" class="collapse navbar-collapse">
         <a class="flex-sm-fill text-sm-center nav-link col" href="index.html">Home</a>
         <a class="flex-sm-fill text-sm-center nav-link col" href="about.html">About</a>
         <a class="flex-sm-fill text-sm-center nav-link col active" href="directions.html">Directions</a>
+        <a class="flex-sm-fill text-sm-center nav-link col" href="accommodations.html">Accommodations</a>
         <a class="flex-sm-fill text-sm-center nav-link col" href="#">Registry</a>
         <a class="flex-sm-fill text-sm-center nav-link col" href="contact.html">RSVP</a>
     </div>
 </nav>
-<section class="bgimage map">
-    <div class="container-fluid">
-        <div class="row">
-        <!-- <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12"> -->
-            <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1A1zGHeXkdQ33MtuklTuHVPBtHX9vfrWK" width="100%" height="500px"></iframe>
-        <!-- </div> -->
-        </div>
-    </div>
-</section>
+<div id="map" class="hidden-xs-down hidden-sm-down"></div>
+   <script>
+     function initMap() {
+       var uluru = {lat: 34.9341055, lng: -81.0110465,};
+       var map = new google.maps.Map(document.getElementById('map'), {
+         zoom: 14,
+         center: uluru
+       });
+       var marker = new google.maps.Marker({
+         position: uluru,
+         map: map
+       });
+     }
+   </script>
+   <script async defer
+   src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCH16doNrJl-taFlFDtsEoGYLFlk_QUWuY&callback=initMap">
+   </script>
+
 
   <header id="header">
     <div class="container">
       <div class="row">
-        <div class="entry col-lg-4 col-md-4 col-sm-12 col-xs-12">
+        <div class="entry col">
+          <h1 class="entryTitle">See below for directions to, and from places of interest. Including links with custom starting points.</h1>
+          <p>If you need additional assistance please see the RSVP page for a point of contact.</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="entry col">
           <h3 class="entryTitle">
               Glencairn Gardens
           </h3>
-          <p>From 26: <a href="#">LINK HERE</a></p>
-          <p>From Hotel: <a href="#">LINK HERE</a></p>
+          <span style="font-style:italic;">801-855 Crest St, Rock Hill, SC 29730</span><br /><br />
+          <p><a href="https://www.google.com/maps/dir//34.9340703,-81.0200018/@34.9341055,-81.0110465,14z">Set your starting point using this link.</a></p>
+          <p><a href="https://www.google.com/maps/dir/I-77+Bridge,+Interstate+77,+Rock+Hill,+SC/34.9340703,-81.0200018/@34.956468,-81.0321994,13z/data=!3m1!4b1!4m8!4m7!1m5!1m1!1s0x88568f57c22eab99:0xa550cdf0599bed17!2m2!1d-80.9879386!2d34.9768103!1m0">From 77: Take the Dave Lyle Blvd Exit 79</a></p>
+          <p><a href="https://www.google.com/maps/dir/Wingate+by+Wyndham+Rock+Hill+%2F+Charlotte+%2F+Metro+Area,+760+Galleria+Blvd,+Rock+Hill,+SC+29730/34.9340703,-81.0200018/@34.9299068,-81.0131756,14z/data=!3m1!4b1!4m8!4m7!1m5!1m1!1s0x88568639675c8ccd:0x8ab6a7c9a321827d!2m2!1d-80.9701749!2d34.9376895!1m0">From the Hotel.</a></p>
         </div>
-        <div class="entry col-lg-4 col-md-4 col-sm-12 col-xs-12">
+        <div class="entry col">
             <h3 class="entryTitle">
                 Center for the Arts (Arts Council of York County)
             </h3>
-            <p>From 26: <a href="#">LINK HERE</a></p>
-            <p>From Hotel: <a href="#">LINK HERE</a></p></p>
+            <span style="font-style:italic;">121 E Main St, Rock Hill, SC 29730</span><br /><br />
+            <p><a href="https://www.google.com/maps/dir//Center+for+the+Arts+(Arts+Council+of+York+County),+121+E+Main+St,+Rock+Hill,+SC+29730/@34.9258028,-81.0622317,13z/data=!3m1!4b1!4m8!4m7!1m0!1m5!1m1!1s0x885688559ad18513:0x889e9e2edd779d6d!2m2!1d-81.0271264!2d34.9258078">Set your starting point using this link.</a></p>
+            <p><a href="https://www.google.com/maps/dir/I-77+Bridge,+Interstate+77,+Rock+Hill,+SC/Center+for+the+Arts+(Arts+Council+of+York+County),+121+E+Main+St,+Rock+Hill,+SC+29730/@34.956468,-81.0343354,13z/data=!4m13!4m12!1m5!1m1!1s0x88568f57c22eab99:0xa550cdf0599bed17!2m2!1d-80.9879386!2d34.9768103!1m5!1m1!1s0x885688559ad18513:0x889e9e2edd779d6d!2m2!1d-81.0271264!2d34.9258078">From 77: Take Exit 75 for Porter Rd or Exit 77 for Sutton Rd.</a></p>
+            <p><a href="https://www.google.com/maps/dir/Glencairn+Garden,+Crest+Street,+Rock+Hill,+SC/Center+for+the+Arts+(Arts+Council+of+York+County),+121+E+Main+St,+Rock+Hill,+SC+29730/@34.9288425,-81.0285452,16z/data=!3m1!4b1!4m13!4m12!1m5!1m1!1s0x885688fa0ad10cdb:0xdacbc5488b57375!2m2!1d-81.0200001!2d34.9340692!1m5!1m1!1s0x885688559ad18513:0x889e9e2edd779d6d!2m2!1d-81.0271264!2d34.9258078">From Glencairn Gardens</a></p></p>
         </div>
-        <div class="col-lg-4 col-lg-4 hidden-sm hidden-xs">
-            <h4 class="sidebarTitle">
-              Wingate by Wyndham Rock Hill
+        <div class="col entry">
+            <h4 class="entryTitle">
+              Wingate by Wyndham Rock Hill / Charlotte / Metro Area - <br/><a style="font-size:21px;" href="tel:18038534122">Tap to call: (803) 853-4122</a>
             </h4>
-            <p>From 26: <a href="#">LINK HERE</a></p>
-            <p>From Hotel: <a href="#">LINK HERE</a></p></p>
+            <span style="font-style:italic;">760 Galleria Blvd, Rock Hill, SC 29730</span><br /><br />
+            <p><a href="https://www.google.com/maps/dir//Wingate+by+Wyndham+Rock+Hill+%2F+Charlotte+%2F+Metro+Area,+Galleria+Boulevard,+Rock+Hill,+SC/@34.9376845,-81.0052802,13z/data=!4m8!4m7!1m0!1m5!1m1!1s0x88568639675c8ccd:0x8ab6a7c9a321827d!2m2!1d-80.9701749!2d34.9376895">Set your starting point using this link.</a></p>
+            <p><a href="https://www.google.com/maps/dir/I-77+Bridge,+Interstate+77,+Rock+Hill,+SC/Wingate+by+Wyndham+Rock+Hill+%2F+Charlotte+%2F+Metro+Area,+Galleria+Boulevard,+Rock+Hill,+SC/@34.9683227,-81.0135247,13z/data=!4m13!4m12!1m5!1m1!1s0x88568f57c22eab99:0xa550cdf0599bed17!2m2!1d-80.9879386!2d34.9768103!1m5!1m1!1s0x88568639675c8ccd:0x8ab6a7c9a321827d!2m2!1d-80.9701749!2d34.9376895">From 77: Take the Dave Lyle Blvd Exit 79</a></p>
+            <p><a href="https://www.google.com/maps/dir/Glencairn+Garden,+Crest+Street,+Rock+Hill,+SC/Center+for+the+Arts+(Arts+Council+of+York+County),+121+E+Main+St,+Rock+Hill,+SC+29730/@34.9288425,-81.0285452,16z/data=!4m13!4m12!1m5!1m1!1s0x885688fa0ad10cdb:0xdacbc5488b57375!2m2!1d-81.0200001!2d34.9340692!1m5!1m1!1s0x885688559ad18513:0x889e9e2edd779d6d!2m2!1d-81.0271264!2d34.9258078">From Center for the Arts.</a></p></p>
         </div>
       </div>
     </div>
@@ -76,28 +116,20 @@
   <footer id="footer">
     <div class="container">
       <div class="row">
-        <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
             <h5>&copy; 2018 Lorem ipsum dolor sit amet.</h5>
         </div>
-        <div class="d-none d-sm-block offset-lg-4 col-lg-4 col-md-6 col-sm-12">
+        <!-- <div class="d-none d-sm-block offset-lg-4 col-lg-4 col-md-6 col-sm-12">
             <h5>&copy; 2018 Lorem ipsum dolor sit amet.</h5>
-        </div>
+        </div> -->
       </div>
     </div>
   </footer>
 </div>
 <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4" crossorigin="anonymous"></script>
-  <script defer src="https://use.fontawesome.com/releases/v5.0.4/js/all.js"></script>
-  <script type="text/JavaScript">
-    $(function() {
-      console.log( "ready!" );
-      $('.i4ewOd-pzNkMb-haAclf').css('display', 'none');
-    });
-
-  </script>
+  <script src="js\jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="js\popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="js\bootstrap-4.0.0-beta.3.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4" crossorigin="anonymous"></script>
 </body>
 </html>
