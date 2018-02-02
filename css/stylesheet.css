@@ -126,7 +126,8 @@ footer h5, #footer h5 {
   background: url('../img/hero-image.jpg');
   /* background: url('../img/hero.png'); */
   background-repeat: no-repeat;
-  background-position: right center;
+  /*background-position: right center;*/
+  background-position: 75% 50%;
   background-size:cover;
 
 }
@@ -162,6 +163,15 @@ footer h5, #footer h5 {
       font-size:21px;
       font-weight: 600;
       text-shadow:2px 2px #333;
+}
+.btn-rsvp {
+    border:1px solid #d8a11a;
+    border-radius: 6px;
+    color:#fff;
+    background-color: #b52025;
+}
+.btn-rsvp:hover {
+    background-color: #84161a;
 }
 .not-home .bgimage {
 height: 275px;
