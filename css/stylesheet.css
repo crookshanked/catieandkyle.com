@@ -43,9 +43,11 @@ body {
   color:#000;
 }
 .hamburger-bar {
-    width: 35px;
-    height: 5px;
-    background-color: black;
+    /* width: 35px; */
+    /* height: 5px; */
+    width: 100%;
+    height: 2px;
+    background-color:#2d2d2d;
     margin: 6px 0;
 }
 .nav a {
@@ -113,6 +115,10 @@ footer, #footer {
     font-family:fontinregular;
     color: #fff;
 }
+footer h5, #footer h5 {
+  text-align: left;
+  font-size:14px;
+}
 
 .bgimage {
   width:100%;
@@ -126,8 +132,15 @@ footer, #footer {
 }
 .bgimage .container-fluid {
   position: relative;
-  top: 20%;
+  top: 30%;
 }
+.bgimage h1 {
+  font-size: 32px;
+}
+.bgimage h2 {
+  font-size:28px;
+}
+
 .bgimage h1, .bgimage h2, .bgimage h3 {
     font-family:bocklinregular;
     color:#fff;
@@ -140,11 +153,15 @@ footer, #footer {
     /*background-color: #d8a11a;*/
     /*border-color: #d8a11a;*/
 }
+.page-home .bgimage .text-wrapper {
+  text-align: center;
+}
 .page-home .bgimage .countdown-timer {
       font-family:fontinregular;
       color: #fff;
-      font-size:28px;
+      font-size:21px;
       font-weight: 600;
+      text-shadow:2px 2px #333;
 }
 .not-home .bgimage {
 height: 275px;
@@ -160,10 +177,31 @@ height: 275px;
 /* // Extra small devices (portrait phones, less than 576px) */
 /* // No media query since this is the default in Bootstrap */
 
+@media (max-width: 480px) {
+  .polaroid {
+    width: 100%;
+  }
+}
 /* // Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) {
-
+  .bgimage .container-fluid {
+    position: relative;
+    top: 15%;
+  }
 }
+
+@media (min-width: 640px) {
+  .page-home .bgimage .text-wrapper {
+    text-align: left;
+  }
+  .page-home .bgimage .countdown-timer {
+    width: 75%;
+  }
+  footer h5, #footer h5 {
+    text-align: right;
+  }
+}
+
 
 /* // Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {
@@ -181,8 +219,38 @@ height: 275px;
     content:'Catie and Kyle at the Stinson Apartment.';
     font-size: 14px;
   }
-}
+  .bgimage .container-fluid {
+    position: relative;
+    top: 20%;
+  }
+  .page-home .bgimage .text-wrapper {
+    text-align: center;
+  }
+  .page-home .bgimage .countdown-timer{
+      /* width: 100%; */
+    font-size:32px;
+    margin: 0 auto;
+  }
+  .bgimage h1 {
+      font-size:72px;
+  }
+  .bgimage h2 {
+      font-size:48px;
+  }
 
+  .bgimage h3 {
+      font-size:40px;
+  }
+}
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px)
+and (orientation : portrait) {
+  .bgimage .container-fluid {
+    position: relative;
+    top: 30%;
+  }
+}
 /* // Large devices (desktops, 992px and up) */
 @media (min-width: 992px) {
   .bgimage .container-fluid {
@@ -223,23 +291,27 @@ height: 275px;
     color: #fff;
     text-transform: uppercase;
     font-weight: 700;
-    font-size:36px;
+    font-size:24px;
   }
   .nav a.flex-sm-fill.text-sm-center.nav-link.col.active {
     color:#ccc;
   }
+  .btn-rsvp,
   .nav a.flex-sm-fill.text-sm-center.nav-link.col:last-child {
     border:1px solid #d8a11a;
     border-radius: 6px;
-    color: #d8a11a;
-    background-color: #fffee2;
+    color:#fff;
+    background-color: #b52025;
   }
+  .btn-rsvp:hover,
   .nav a.flex-sm-fill.text-sm-center.nav-link.col:last-child:hover {
-    background-color: cornsilk;
+    background-color: #84161a;
   }
 }
 
 /* // Extra large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
-
+  .nav a.flex-sm-fill.text-sm-center.nav-link.col {
+    font-size:36px;
+  }
 }
