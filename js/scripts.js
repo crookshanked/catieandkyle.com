@@ -18,13 +18,13 @@ function showRemaining() {
     }
     var days = Math.floor(distance / _day);
     var hours = Math.floor((distance % _day) / _hour);
-    var minutes = Math.floor((distance % _hour) / _minute);
-    var seconds = Math.floor((distance % _minute) / _second);
+    // var minutes = Math.floor((distance % _hour) / _minute);
+    // var seconds = Math.floor((distance % _minute) / _second);
 
     document.getElementById('countdown').innerHTML = days + ' days ';
     document.getElementById('countdown').innerHTML += hours + ' hours ';
-    document.getElementById('countdown').innerHTML += minutes + ' minutes ';
-    document.getElementById('countdown').innerHTML += seconds + ' seconds';
+    // document.getElementById('countdown').innerHTML += minutes + ' minutes ';
+    // document.getElementById('countdown').innerHTML += seconds + ' seconds';
 }
 
 timer = setInterval(showRemaining, 1000);/**
