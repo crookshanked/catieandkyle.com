@@ -183,7 +183,9 @@ height: 275px;
 .not-home h2 {
   display: none;
 }
-
+footer h5 a, #footer h5 a {
+  color:#fff;
+}
 /* // Extra small devices (portrait phones, less than 576px) */
 /* // No media query since this is the default in Bootstrap */
 
