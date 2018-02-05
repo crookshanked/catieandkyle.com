@@ -62,14 +62,15 @@
 <div id="map" class="hidden-xs-down hidden-sm-down"></div>
    <script>
      function initMap() {
-       var uluru = {lat: 34.9341055, lng: -81.0110465,};
+       var uluru = {lat: 34.9341055, lng: -81.0110465};
        var map = new google.maps.Map(document.getElementById('map'), {
          zoom: 14,
          center: uluru
        });
        var marker = new google.maps.Marker({
          position: uluru,
-         map: map
+         map: map,
+         title: Glencairn Gardens
        });
      }
    </script>
