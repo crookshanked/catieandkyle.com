@@ -34,7 +34,12 @@
           box-shadow: none;
         }
         .nav a.flex-sm-fill.text-sm-center.nav-link.col:last-child {
-          color:#fff;
+          color:#444;
+        }
+        @media (min-width: 992px) {
+          .nav a.flex-sm-fill.text-sm-center.nav-link.col:last-child {
+            color:#fff;
+          }
         }
     </style>
 </head>
@@ -62,7 +67,7 @@
 <div id="map" class="hidden-xs-down hidden-sm-down"></div>
    <script>
      function initMap() {
-       var uluru = {lat: 34.9341055, lng: -81.0110465};
+       var uluru = {lat: 34.934144, lng: -81.019977};
        var map = new google.maps.Map(document.getElementById('map'), {
          zoom: 14,
          center: uluru
@@ -70,7 +75,7 @@
        var marker = new google.maps.Marker({
          position: uluru,
          map: map,
-         title: Glencairn Gardens
+         title: 'Glencairn Gardens'
        });
      }
    </script>
